@@ -38,6 +38,9 @@ $routes->get('/IES/(:segment)', 'IESController::getone/$1');
 $routes->get('/Tecnologia', 'TecnologiaController::index');
 $routes->get('/Tecnologia/(:segment)', 'TecnologiaController::getone/$1');
 $routes->get('/Tecnologia/Ies/(:segment)', 'TecnologiaController::getTecnologiaByIES/$1');
+$routes->get('/Aspirante', 'AspiranteController::index');
+$routes->get('/Aspirante/(:segment)', 'AspiranteController::getone/$1');
+$routes->get('/Aspirante/Ies/(:segment)', 'AspiranteController::getAspiranteByIES/$1');
 /**
  * --------------------------------------------------------------------
  * Additional Routing
