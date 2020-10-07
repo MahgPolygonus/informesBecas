@@ -5,19 +5,15 @@ class IESController extends BaseController
 {
     public function index()
     {
-        // $model = new IESModel();
-        // $data =$model->getIES();
-        // header('Content-Type: application/json');
-        // echo json_encode($data);
-        $db = \Config\Database::connect();
-        $query = $db->query('SELECT * FROM institucion_educativa_superior');
-        $results = $query->getResult();
-        echo json_encode($results);
+        $model = new IESModel();        
+        $data= $model->getIES();
+        echo json_encode($data);
     }
+
     public function getone($id)
     {
         $model = new IESModel();        
-        $data= $model->getIES($id);
+        $data= $model->getIESById($id);
         header('Content-Type: application/json');
         echo json_encode($data);
     }

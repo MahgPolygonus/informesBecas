@@ -8,11 +8,21 @@ protected $allowedFields = ['id', 'nombre','id_ies','cupos'];
 
 public function getTecnologia()
 {
- return $this->findAll();   
+		$db = \Config\Database::connect();
+        $query = $db->query('SELECT id,nombre,id_ies,cupos FROM tecnologia');
+        $results = $query->getResult();
+        return $results;
 }
-public function getTecnologia($id)
+
+public function getTecnologiaById($id)
 {
     return $this->where(['id' => $id])
     ->findAll();   
+}
+
+public function getTecnologiaByIES($id_ies)
+{
+	return $this->where(['id_ies'=> $id_ies])
+	->findAll();
 }
 }

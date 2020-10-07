@@ -14,7 +14,7 @@ public function getComuna()
         return $results;
 }
 
-public function getComunabyid($id)
+public function getComunaById($id)
 {
     return $this->where(['id' => $id])
     ->findAll();   

@@ -5,7 +5,6 @@ class ComunaController extends BaseController
 {
     public function index()
     {
-    
         $model = new ComunaModel();        
         $data= $model->getComuna();
         echo json_encode($data);
@@ -14,7 +13,7 @@ class ComunaController extends BaseController
     public function getone($id)
     {
         $model = new ComunaModel();        
-        $data= $model->getComunabyid($id);
+        $data= $model->getComunaById($id);
         header('Content-Type: application/json');
         echo json_encode($data);
     }

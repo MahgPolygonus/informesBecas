@@ -33,6 +33,11 @@ $routes->setAutoRoute(true);
 $routes->get('/', 'Home::index');
 $routes->get('/Comunas', 'ComunaController::index');
 $routes->get('/Comunas/(:segment)', 'ComunaController::getone/$1');
+$routes->get('/IES', 'IESController::index');
+$routes->get('/IES/(:segment)', 'IESController::getone/$1');
+$routes->get('/Tecnologia', 'TecnologiaController::index');
+$routes->get('/Tecnologia/(:segment)', 'TecnologiaController::getone/$1');
+$routes->get('/Tecnologia/Ies/(:segment)', 'TecnologiaController::getTecnologiaByIES/$1');
 /**
  * --------------------------------------------------------------------
  * Additional Routing
