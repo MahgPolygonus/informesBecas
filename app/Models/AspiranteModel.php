@@ -65,6 +65,7 @@ public function getAspirantesByLgtbi()
     return $results;
 }
 
+<<<<<<< HEAD
 public function getAspirantesByVulnerabilidad()
 {
     $db = \Config\Database::connect();
@@ -104,6 +105,10 @@ public function getAspirantesByIndigena()
 public function saludo()
 {
     echo "hola";
+=======
+public function Hola(){
+    return false;
+>>>>>>> d9771cf57642e85b937a178b3281d85a0536e7bd
 }
 
 }
