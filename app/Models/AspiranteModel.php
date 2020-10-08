@@ -56,4 +56,10 @@ public function getAspirantesByIES($id,$periodo = null)
     return $results;
 }
 
+public function prueba()
+{
+    $query="a";
+    return $query;
+}
+
 }
