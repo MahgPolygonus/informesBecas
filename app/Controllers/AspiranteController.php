@@ -33,4 +33,36 @@ class AspiranteController extends BaseController
         header('Content-Type: application/json');
         echo json_encode($data);
     }
+
+    public function getAspirantesByVulnerabilidad()
+    {
+        $model = new AspiranteModel();
+        $data= $model->getAspirantesByVulnerabilidad();
+        header('Content-Type: application/json');
+        echo json_encode($data);
+    }
+
+    public function getAspirantesByDiscapacidad()
+    {
+        $model = new AspiranteModel();
+        $data= $model->getAspirantesByDiscapacidad();
+        header('Content-Type: application/json');
+        echo json_encode($data);
+    }
+
+    public function getAspirantesByAfro()
+    {
+        $model = new AspiranteModel();
+        $data= $model->getAspirantesByAfro();
+        header('Content-Type: application/json');
+        echo json_encode($data);
+    }
+
+    public function getAspirantesByIndigena()
+    {
+        $model = new AspiranteModel();
+        $data= $model->getAspirantesByIndigena();
+        header('Content-Type: application/json');
+        echo json_encode($data);
+    }
 }

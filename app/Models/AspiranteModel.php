@@ -50,7 +50,7 @@ public function getAspirantesByIES($id,$periodo = null)
     $query = $db->query('SELECT rf.id,rf.primerNombre,rf.segundoNombre,rf.primerApellido,rf.segundoApellido,rf.id_comuna_residencia,rf.IdLgtbi,rf.idVulnerabilidad,rf.idDiscapacidad,rf.idAfro,rf.Id_indigena,rf.fecha_registro,ia.programaOpcion1,institucionOpcion1 FROM v_reportesFormularioBecas as rf inner join becas_aspirante_informacionacademica as ia on rf.id=ia.id_usuario where rf.periodo=5 and ia.institucionOpcion1='.$id);   
     if($periodo!=null)
     {
-    $query = $db->query('SELECT rf.id,rf.primerNombre,rf.segundoNombre,rf.primerApellido,rf.segundoApellido,rf.id_comuna_residencia,rf.IdLgtbi,rf.idVulnerabilidad,rf.idDiscapacidad,rf.idAfro,rf.Id_indigena,rf.fecha_registro,ia.programaOpcion1,institucionOpcion1 FROM v_reportesFormularioBecas as rf inner join becas_aspirante_informacionacademica as ia on rf.id=ia.id_usuario where ia.institucionOpcion1='.$id.' and periodo='.$periodo);      
+    $query = $db->query('SELECT rf.id,rf.primerNombre,rf.segundoNombre,rf.primerApellido,rf.segundoApellido,rf.id_comuna_residencia,rf.IdLgtbi,rf.idVulnerabilidad,rf.idDiscapacidad,rf.idAfro,rf.Id_indigena,rf.fecha_registro,ia.programaOpcion1,institucionOpcion1 FROM v_reportesFormularioBecas as rf inner join becas_aspirante_informacionacademica as ia on rf.id=ia.id_usuario where rf.periodo=5 and ia.institucionOpcion1='.$id.' and periodo='.$periodo);      
     }
     $results = $query->getResult();
     return $results;
@@ -63,6 +63,47 @@ public function getAspirantesByLgtbi()
 
     $results = $query->getResult();
     return $results;
+}
+
+public function getAspirantesByVulnerabilidad()
+{
+    $db = \Config\Database::connect();
+    $query = $db->query("SELECT * FROM v_reportesFormularioBecas WHERE idVulnerabilidad is not null and idVulnerabilidad<>'' ORDER BY idVulnerabilidad");
+
+    $results = $query->getResult();
+    return $results;
+}
+
+public function getAspirantesByDiscapacidad()
+{
+    $db = \Config\Database::connect();
+    $query = $db->query("SELECT * FROM v_reportesFormularioBecas WHERE idDiscapacidad is not null and idDiscapacidad<>'' ORDER BY idDiscapacidad");
+
+    $results = $query->getResult();
+    return $results;
+}
+
+public function getAspirantesByAfro()
+{
+    $db = \Config\Database::connect();
+    $query = $db->query("SELECT * FROM v_reportesFormularioBecas WHERE idAfro is not null and idAfro<>'' ORDER BY idAfro");
+
+    $results = $query->getResult();
+    return $results;
+}
+
+public function getAspirantesByIndigena()
+{
+    $db = \Config\Database::connect();
+    $query = $db->query("SELECT * FROM v_reportesFormularioBecas WHERE Id_indigena is not null and Id_indigena<>'' ORDER BY Id_indigena");
+
+    $results = $query->getResult();
+    return $results;
+}
+
+public function saludo()
+{
+    echo "hola";
 }
 
 }

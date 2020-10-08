@@ -42,6 +42,10 @@ $routes->get('/api/Aspirante', 'AspiranteController::index');
 $routes->get('/api/Aspirante/Id/(:segment)', 'AspiranteController::getone/$1');
 $routes->get('/api/Aspirante/Ies/(:segment)', 'AspiranteController::getAspiranteByIES/$1');
 $routes->get('/api/Aspirante/Lgtbi', 'AspiranteController::getAspirantesByLgtbi');
+$routes->get('/api/Aspirante/Vulnerabilidad', 'AspiranteController::getAspirantesByVulnerabilidad');
+$routes->get('/api/Aspirante/Discapacidad', 'AspiranteController::getAspirantesByDiscapacidad');
+$routes->get('/api/Aspirante/Afro', 'AspiranteController::getAspirantesByAfro');
+$routes->get('/api/Aspirante/Indigena', 'AspiranteController::getAspirantesByIndigena');
 /**
  * --------------------------------------------------------------------
  * Additional Routing
