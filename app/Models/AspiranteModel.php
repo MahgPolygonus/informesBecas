@@ -66,7 +66,7 @@ public function getAspirantesByLgtbi()
 }
 
 public function Hola(){
-    return false;
+    return true;
 }
 
 }
