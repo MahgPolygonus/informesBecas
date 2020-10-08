@@ -56,4 +56,13 @@ public function getAspirantesByIES($id,$periodo = null)
     return $results;
 }
 
+public function getAspirantesByLgtbi()
+{
+    $db = \Config\Database::connect();
+    $query = $db->query("SELECT * FROM v_reportesFormularioBecas WHERE IdLgtbi is not null and IdLgtbi<>'' ORDER BY IdLgtbi");
+
+    $results = $query->getResult();
+    return $results;
+}
+
 }

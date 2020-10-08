@@ -25,4 +25,12 @@ class AspiranteController extends BaseController
         header('Content-Type: application/json');
         echo json_encode($data);
     }
+
+    public function getAspirantesByLgtbi()
+    {
+        $model = new AspiranteModel();
+        $data= $model->getAspirantesByLgtbi();
+        header('Content-Type: application/json');
+        echo json_encode($data);
+    }
 }

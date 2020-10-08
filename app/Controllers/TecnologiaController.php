@@ -8,6 +8,7 @@ class TecnologiaController extends BaseController
         $model = new TecnologiaModel();        
         $data= $model->getTecnologia();
         echo json_encode($data);
+        
     }
     public function getone($id)
     {

@@ -31,16 +31,17 @@ $routes->setAutoRoute(true);
 // We get a performance increase by specifying the default
 // route since we don't have to scan directories.
 $routes->get('/', 'Home::index');
-$routes->get('/Comunas', 'ComunaController::index');
-$routes->get('/Comunas/(:segment)', 'ComunaController::getone/$1');
-$routes->get('/IES', 'IESController::index');
-$routes->get('/IES/(:segment)', 'IESController::getone/$1');
-$routes->get('/Tecnologia', 'TecnologiaController::index');
-$routes->get('/Tecnologia/(:segment)', 'TecnologiaController::getone/$1');
-$routes->get('/Tecnologia/Ies/(:segment)', 'TecnologiaController::getTecnologiaByIES/$1');
-$routes->get('/Aspirante', 'AspiranteController::index');
-$routes->get('/Aspirante/(:segment)', 'AspiranteController::getone/$1');
-$routes->get('/Aspirante/Ies/(:segment)', 'AspiranteController::getAspiranteByIES/$1');
+$routes->get('/api/Comuna', 'ComunaController::index');
+$routes->get('/api/Comuna/(:segment)', 'ComunaController::getone/$1');
+$routes->get('/api/IES', 'IESController::index');
+$routes->get('/api/IES/(:segment)', 'IESController::getone/$1');
+$routes->get('/api/Tecnologia', 'TecnologiaController::index');
+$routes->get('/api/Tecnologia/(:segment)', 'TecnologiaController::getone/$1');
+$routes->get('/api/Tecnologia/Ies/(:segment)', 'TecnologiaController::getTecnologiaByIES/$1');
+$routes->get('/api/Aspirante', 'AspiranteController::index');
+$routes->get('/api/Aspirante/Id/(:segment)', 'AspiranteController::getone/$1');
+$routes->get('/api/Aspirante/Ies/(:segment)', 'AspiranteController::getAspiranteByIES/$1');
+$routes->get('/api/Aspirante/Lgtbi', 'AspiranteController::getAspirantesByLgtbi');
 /**
  * --------------------------------------------------------------------
  * Additional Routing
