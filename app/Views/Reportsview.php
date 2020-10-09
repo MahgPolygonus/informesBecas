@@ -768,7 +768,7 @@
                           <td>$183,000</td>
                         </tr>
                         <tr>
-                          <td>Donna Snider</td>
+                          <td>Snider</td>
                           <td>Customer Support</td>
                           <td>New York</td>
                           <td>27</td>
