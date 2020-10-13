@@ -48,15 +48,15 @@
           <div id="sidebar-menu" class="main_menu_side hidden-print main_menu">
             <div class="menu_section">
               <ul class="nav side-menu">
-                <li class="active"><a><i class="fa fa-table"></i> General </a>
+                <li><a href="/"><i class="fa fa-table"></i> General </a>
                 </li>
-                <li><a><i class="fa fa-book"></i> IES </a>
+                <li class="active"><a href="/IES"><i class="fa fa-book"></i> IES </a>
                 </li>
-                <li><a><i class="fa fa-desktop"></i> Programas </a>
+                <li><a href="/Programas"><i class="fa fa-desktop"></i> Programas </a>
                 </li>
-                <li><a><i class="fa fa-home"></i> Comunas </a>
+                <li><a href="/Comunas"><i class="fa fa-home"></i> Comunas </a>
                 </li>
-                <li><a><i class="fa fa-bar-chart-o"></i> Total Validador </a>
+                <li><a href="/Validadores"><i class="fa fa-bar-chart-o"></i> Total Validador </a>
                 </li>
                 <li><a><i class="fa fa-user"></i> Aspirantes <span class="fa fa-chevron-down"></span></a>
                   <ul class="nav child_menu">
@@ -98,9 +98,6 @@
       <div class="right_col" role="main">
         <div class="">
           <div class="page-title">
-            <div class="title_left">
-              <h3>Users <small>Some examples to get you started</small></h3>
-            </div>
 
           </div>
 
@@ -108,22 +105,12 @@
           <div class="col-md-12 col-sm-12 ">
             <div class="x_panel">
               <div class="x_title">
-                <h2>Informes <small>Users</small></h2>
+                <h2>Informe IES</h2>
                 <div class="clearfix"></div>
               </div>
               <div class="x_content">
                 <div class="row">
                   <div class="col-sm-12">
-                    <div class="card-box table-responsive">
-                      <div class="input-group">
-                        <div class="input-group-prepend">
-                          <span class="input-group-text">Filtrar por fechas</span>
-                        </div>
-                        <input type="text" placeholder="Desde" aria-label="Desde" class="form-control start-date">
-                        <input type="text" placeholder="Hasta" aria-label="Hasta" class="form-control end-date">
-                      </div>
-                    </div>
-
                     <table id="datatable-buttons" class="table table-striped table-bordered" style="width:100%">
                       <thead>
                         <tr>

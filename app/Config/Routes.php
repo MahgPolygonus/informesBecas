@@ -35,6 +35,7 @@ $routes->get('/api/Comuna', 'ComunaController::index');
 $routes->get('/api/Comuna/(:segment)', 'ComunaController::getone/$1');
 $routes->get('/api/IES', 'IESController::index');
 $routes->get('/api/IES/(:segment)', 'IESController::getone/$1');
+$routes->get('/IES', 'IESController::index');
 $routes->get('/api/Tecnologia', 'TecnologiaController::index');
 $routes->get('/api/Tecnologia/(:segment)', 'TecnologiaController::getone/$1');
 $routes->get('/api/Tecnologia/Ies/(:segment)', 'TecnologiaController::getTecnologiaByIES/$1');
