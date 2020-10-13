@@ -140,8 +140,8 @@
                       <tbody>
                         <tr>
                           <td>Tiger Nixon</td>
-                          <td>System Architesssssssssssssssssssssssct</td>
-                          <td>Edinburgh</td>
+                          <td>System Architsct</td>
+                          <td>Medallo</td>
                           <td>61</td>
                           <td>2011/04/25</td>
                           <td>$320,800</td>
