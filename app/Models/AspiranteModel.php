@@ -101,4 +101,39 @@ public function getAspirantesByIndigena()
     return $results;
 }
 
+public function GetAspirantesFiltros($filtros)
+{
+    $db = \Config\Database::connect();
+    $Datos=explode ("~", $filtros);
+    $query2="SELECT * FROM v_reportesFormularioBecas WHERE";
+    $query3="";
+    for ($i=0; $i < count($Datos); $i++)
+    { 
+     $a=explode("_", $Datos[$i]);
+     switch ($a[0]) {
+         case 'Fecha':
+            if ($query3=="") {
+         $query3.' fecha_registro between  CAST("'.$a[1].' AS DATETIME) and  CAST("'.$a[2]."AS DATETIME);";    
+            }
+        else
+        {
+            $query3.'and fecha_registro between  CAST("'.$a[1].' AS DATETIME) and  CAST("'.$a[2]."AS DATETIME);";    
+     
+        } 
+        break;
+         
+         case 'Like':
+        if ($query3=="") {
+            //Segun el [1] like [2]
+            $query3="Primer";
+        }
+         break;
+     }
+    }
+    $query = $db->query($query2.$query3);
+    $results = $query->getResult();
+    return $results;
+
+}
+
 }
