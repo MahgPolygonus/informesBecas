@@ -46,6 +46,7 @@ $routes->get('/api/Aspirante/Vulnerabilidad', 'AspiranteController::getAspirante
 $routes->get('/api/Aspirante/Discapacidad', 'AspiranteController::getAspirantesByDiscapacidad');
 $routes->get('/api/Aspirante/Afro', 'AspiranteController::getAspirantesByAfro');
 $routes->get('/api/Aspirante/Indigena', 'AspiranteController::getAspirantesByIndigena');
+$routes->get('/api/General/Fecha/(:segment)/(:segment)/(:segment)', 'Home::GeneralByFecha/$1/$2/$3');
 /**
  * --------------------------------------------------------------------
  * Additional Routing
