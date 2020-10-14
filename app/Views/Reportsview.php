@@ -8,7 +8,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
-  <title>DataTables | Gentelella</title>
+  <title>Reportes | General</title>
 
   <!-- Bootstrap -->
   <link href="cdn.datatables.net/1.10.20/css/jquery.dataTables.min.css">
@@ -49,13 +49,13 @@
               <ul class="nav side-menu">
                 <li class="active"><a><i class="fa fa-table"></i> General </a>
                 </li>
-                <li><a><i class="fa fa-book"></i> IES </a>
+                <li><a href="/IES"><i class="fa fa-book"></i> IES </a>
                 </li>
-                <li><a><i class="fa fa-desktop"></i> Programas </a>
+                <li><a href="/Programas"><i class="fa fa-desktop"></i> Programas </a>
                 </li>
-                <li><a><i class="fa fa-home"></i> Comunas </a>
+                <li><a href="/Comunas"><i class="fa fa-home"></i> Comunas </a>
                 </li>
-                <li><a><i class="fa fa-bar-chart-o"></i> Total Validador </a>
+                <li><a href="/Validadores"><i class="fa fa-bar-chart-o"></i> Total Validador </a>
                 </li>
                 <li><a><i class="fa fa-user"></i> Aspirantes <span class="fa fa-chevron-down"></span></a>
                   <ul class="nav child_menu">
@@ -210,16 +210,17 @@
       $startDate.datepicker({
         autoHide: true,
         language: 'es-ES',
+        endDate: $startDate.datepicker('getDate'),
       });
       $endDate.datepicker({
         autoHide: true,
-        endDate: $startDate.datepicker('getDate'),
+        endDate: $endDate.datepicker('getDate'),
         language: 'es-ES',
       });
 
-      $startDate.on('change', function () {
-        $endDate.datepicker('setStartDate', $startDate.datepicker('getDate'));
-      });
+    //   $startDate.on('change', function () {
+    //     $endDate.datepicker('setStartDate', $startDate.datepicker('getDate'));
+    //   });
     });
   </script>
   <!-- Custom Theme Scripts -->

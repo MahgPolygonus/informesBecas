@@ -8,7 +8,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
-  <title>DataTables | Gentelella</title>
+  <title> Reportes | IES</title>
 
   <!-- Bootstrap -->
   <link href="cdn.datatables.net/1.10.20/css/jquery.dataTables.min.css">
@@ -32,6 +32,7 @@
   <link href="../build/css/custom.min.css" rel="stylesheet">
 </head>
 
+
 <body class="nav-md">
   <div class="container body">
     <div class="main_container">
@@ -48,7 +49,7 @@
           <div id="sidebar-menu" class="main_menu_side hidden-print main_menu">
             <div class="menu_section">
               <ul class="nav side-menu">
-                <li><a href="/"><i class="fa fa-table"></i> General </a>
+                <li ><a href="/"><i class="fa fa-table"></i> General </a>
                 </li>
                 <li class="active"><a href="/IES"><i class="fa fa-book"></i> IES </a>
                 </li>
@@ -114,12 +115,13 @@
                     <table id="datatable-buttons" class="table table-striped table-bordered" style="width:100%">
                       <thead>
                         <tr>
-                          <th>Name</th>
-                          <th>Position</th>
-                          <th>Office</th>
-                          <th>Age</th>
-                          <th>Start date</th>
-                          <th>Salary</th>
+                          <th>IES</th>
+                          <th>Cupos</th>
+                          <th>Inscritos</th>
+                          <th>Habilitados</th>
+                          <th>Corregir</th>
+                          <th>Total</th>
+                          <th>Rechazados</th>
                         </tr>
                       </thead>
 
@@ -131,6 +133,7 @@
                           <td>Edinburgh</td>
                           <td>61</td>
                           <td>2011/04/25</td>
+                          <td>$320,800</td>
                           <td>$320,800</td>
                         </tr>
                       </tbody>
