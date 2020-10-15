@@ -32,10 +32,11 @@ $routes->setAutoRoute(true);
 // route since we don't have to scan directories.
 $routes->get('/', 'Home::index');
 $routes->get('/General', 'Home::General');
-$routes->get('/ReporteSemanal', 'Home::GeneralByWeek');
+$routes->get('/api/ReporteSemanal', 'Home::GeneralByWeek');
+$routes->get('/api/General/Fecha/(:segment)/(:segment)/(:segment)', 'Home::GeneralByFecha/$1/$2/$3');
 $routes->get('/api/Comuna', 'ComunaController::index');
 $routes->get('/api/Comuna/(:segment)', 'ComunaController::getone/$1');
-$routes->get('/api/IES', 'IESController::index');
+$routes->get('/api/IES', 'IESController::getall');
 $routes->get('/api/IES/(:segment)', 'IESController::getone/$1');
 $routes->get('/IES', 'IESController::index');
 $routes->get('/api/Tecnologia', 'TecnologiaController::index');
@@ -49,7 +50,7 @@ $routes->get('/api/Aspirante/Vulnerabilidad', 'AspiranteController::getAspirante
 $routes->get('/api/Aspirante/Discapacidad', 'AspiranteController::getAspirantesByDiscapacidad');
 $routes->get('/api/Aspirante/Afro', 'AspiranteController::getAspirantesByAfro');
 $routes->get('/api/Aspirante/Indigena', 'AspiranteController::getAspirantesByIndigena');
-$routes->get('/api/General/Fecha/(:segment)/(:segment)/(:segment)', 'Home::GeneralByFecha/$1/$2/$3');
+
 /**
  * --------------------------------------------------------------------
  * Additional Routing

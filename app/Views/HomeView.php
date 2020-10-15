@@ -111,6 +111,14 @@
                   <div class="col-md-10">
                   <canvas id="ReporteSemanal"></canvas>
                   </div>
+                  <div class="col-md-12">
+                  <h2>Informe Por comunas</h2>
+                </div>
+                  <div class="col-md-1">
+                </div>
+                  <div class="col-md-10">
+                  <canvas id="myChart"></canvas>
+                  </div>
                 </div>
               </div>
             </div>
