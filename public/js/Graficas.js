@@ -20,7 +20,11 @@ $( document ).ready(function() {
 function InfoSemanal(json)
 {
     alert(json.length);
-    
+    if (json.length<7) {
+        
+    } else {
+        
+    }
     var Datos=[];
     
   
